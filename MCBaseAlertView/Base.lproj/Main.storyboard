@@ -16,29 +16,75 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZW-pT-ZIO">
-                                <rect key="frame" x="147" y="433" width="120" height="40"/>
-                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="4vd-dO-ZRz"/>
-                                    <constraint firstAttribute="height" constant="40" id="icj-wE-xpI"/>
-                                </constraints>
-                                <state key="normal" title="show"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <integer key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="showClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IlH-0z-iwy"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Y1l-Eo-Swx">
+                                <rect key="frame" x="132" y="363" width="150" height="180"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZW-pT-ZIO">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="4vd-dO-ZRz"/>
+                                            <constraint firstAttribute="height" constant="40" id="icj-wE-xpI"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="AlertView">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="alertViewClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lYp-ma-pd7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sv8-lx-oA7">
+                                        <rect key="frame" x="0.0" y="70" width="150" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="3VO-LL-buM"/>
+                                            <constraint firstAttribute="height" constant="40" id="7bL-hj-aYD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="AlertController"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="alertControllerClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j6d-Kr-aNN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rSL-bm-2nw">
+                                        <rect key="frame" x="0.0" y="140" width="150" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Jot-eC-PPg"/>
+                                            <constraint firstAttribute="width" constant="150" id="SZw-YS-zjb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="sheetController">
+                                            <color key="titleColor" systemColor="systemGroupedBackgroundColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="sheetControllerClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sGi-6U-GVp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="UZW-pT-ZIO" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="D10-wy-Fzk"/>
-                            <constraint firstItem="UZW-pT-ZIO" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Sni-nW-07L"/>
+                            <constraint firstItem="Y1l-Eo-Swx" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Uab-sD-1en"/>
+                            <constraint firstItem="Y1l-Eo-Swx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="cLr-SU-kzb"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -50,6 +96,15 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

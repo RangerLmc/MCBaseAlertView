@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5938578C26F2DFC900363A09 /* MCSheetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5938578B26F2DFC900363A09 /* MCSheetController.swift */; };
+		5938579726F311AE00363A09 /* BaseAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5938579626F311AE00363A09 /* BaseAlertController.swift */; };
+		5938579A26F3176900363A09 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5938579826F3176900363A09 /* TestViewController.swift */; };
+		5938579B26F3176900363A09 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5938579926F3176900363A09 /* TestViewController.xib */; };
 		59CF0EFE26F1983A003CA699 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CF0EFD26F1983A003CA699 /* AppDelegate.swift */; };
 		59CF0F0226F1983A003CA699 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CF0F0126F1983A003CA699 /* ViewController.swift */; };
 		59CF0F0526F1983A003CA699 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59CF0F0326F1983A003CA699 /* Main.storyboard */; };
@@ -19,6 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5938578B26F2DFC900363A09 /* MCSheetController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCSheetController.swift; sourceTree = "<group>"; };
+		5938579626F311AE00363A09 /* BaseAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAlertController.swift; sourceTree = "<group>"; };
+		5938579826F3176900363A09 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		5938579926F3176900363A09 /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
 		59CF0EFA26F1983A003CA699 /* MCBaseAlertView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MCBaseAlertView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59CF0EFD26F1983A003CA699 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		59CF0F0126F1983A003CA699 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +51,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5938578D26F2E1D900363A09 /* BaseAlertController */ = {
+			isa = PBXGroup;
+			children = (
+				5938579626F311AE00363A09 /* BaseAlertController.swift */,
+			);
+			path = BaseAlertController;
+			sourceTree = "<group>";
+		};
+		5938579C26F3283800363A09 /* MCSheetController */ = {
+			isa = PBXGroup;
+			children = (
+				5938578B26F2DFC900363A09 /* MCSheetController.swift */,
+			);
+			path = MCSheetController;
+			sourceTree = "<group>";
+		};
 		59CF0EF126F1983A003CA699 = {
 			isa = PBXGroup;
 			children = (
@@ -62,11 +86,15 @@
 		59CF0EFC26F1983A003CA699 /* MCBaseAlertView */ = {
 			isa = PBXGroup;
 			children = (
+				5938579C26F3283800363A09 /* MCSheetController */,
+				5938578D26F2E1D900363A09 /* BaseAlertController */,
 				59CF0F2D26F19910003CA699 /* BaseAlertView */,
 				59CF0EFD26F1983A003CA699 /* AppDelegate.swift */,
 				59CF0F0126F1983A003CA699 /* ViewController.swift */,
 				59CF0F3A26F1C876003CA699 /* Test2AlertView.swift */,
 				59CF0F3C26F1C883003CA699 /* Test2AlertView.xib */,
+				5938579826F3176900363A09 /* TestViewController.swift */,
+				5938579926F3176900363A09 /* TestViewController.xib */,
 				59CF0F3026F1BC59003CA699 /* UIColor+mc.swift */,
 				59CF0F0326F1983A003CA699 /* Main.storyboard */,
 				59CF0F0626F1983B003CA699 /* Assets.xcassets */,
@@ -145,6 +173,7 @@
 				59CF0F0A26F1983B003CA699 /* LaunchScreen.storyboard in Resources */,
 				59CF0F0726F1983B003CA699 /* Assets.xcassets in Resources */,
 				59CF0F0526F1983A003CA699 /* Main.storyboard in Resources */,
+				5938579B26F3176900363A09 /* TestViewController.xib in Resources */,
 				59CF0F3D26F1C883003CA699 /* Test2AlertView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -157,9 +186,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				59CF0F2F26F1993E003CA699 /* MCBaseAlertView.swift in Sources */,
+				5938578C26F2DFC900363A09 /* MCSheetController.swift in Sources */,
 				59CF0F0226F1983A003CA699 /* ViewController.swift in Sources */,
+				5938579726F311AE00363A09 /* BaseAlertController.swift in Sources */,
 				59CF0F3B26F1C876003CA699 /* Test2AlertView.swift in Sources */,
 				59CF0EFE26F1983A003CA699 /* AppDelegate.swift in Sources */,
+				5938579A26F3176900363A09 /* TestViewController.swift in Sources */,
 				59CF0F3126F1BC59003CA699 /* UIColor+mc.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
