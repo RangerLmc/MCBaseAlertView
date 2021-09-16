@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     @IBAction func showClicked(_ sender: Any) {
         
         let alert = Test2AlertView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height))
-        alert.show(animation: .pop)
+        alert.show(animation: .bottom)
         
     }
     

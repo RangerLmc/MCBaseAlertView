@@ -44,9 +44,16 @@ class AlertController: UIViewController {
 
 class MCBaseAlertView: NibView {
     
-    private let animationTime: TimeInterval = 0.3
-    
+    // MARK: Public
+    /// 点击蒙层是否消失
+    var isGesture = false
+    /// 背景蒙层颜色透明度
     var bgColor: UIColor = UIColor("#000000")!.withAlphaComponent(0.6)
+    /// 点击蒙层的回调
+    var maskTapAction: (() -> ())?
+    
+    // MARK: Private
+    private let animationTime: TimeInterval = 0.3
     
     private var hiddenColor = UIColor("#000000")!.withAlphaComponent(0)
     
@@ -69,6 +76,7 @@ class MCBaseAlertView: NibView {
     }()
     
     private var tempWindow: UIWindow? = UIApplication.kw_getKeyWindow()
+    private var showAniType: AlertAnimation = .fade
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -84,12 +92,20 @@ class MCBaseAlertView: NibView {
     }
     
     // MARK: Public
+    /// 弹出
+    /// - Parameters:
+    ///   - animation: 动画类型
+    ///   - isGesture: 蒙层点击是否相应
     func show(animation: AlertAnimation = .fade) {
         
+        self.showAniType = animation
+
        let controller = AlertController()
         newWindow?.rootViewController = controller
         newWindow?.rootViewController?.view = self
         newWindow?.makeKeyAndVisible()
+        
+        setupGesture()
         
         switch animation {
         case .top, .left, .bottom, .right:
@@ -168,6 +184,19 @@ class MCBaseAlertView: NibView {
         }
         
     }
+    
+    private func setupGesture() {
+        if !isGesture { return }
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(bgViewTapAction))
+        newWindow?.rootViewController?.view.addGestureRecognizer(tap)
+    }
+    
+    @objc private func bgViewTapAction() {
+        dismiss(animation: showAniType)
+        maskTapAction?()
+    }
+    
     
     /// 设置中心值
     private func setViewCenter(animation: AlertAnimation) -> CGPoint {
